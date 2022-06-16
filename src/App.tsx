@@ -5,8 +5,8 @@ import BalanceChecker from './BalanceChecker';
 function App() {
   return (
     <div className="App">
-      <h1></h1>
-      <WalletConnectButton />./ETHBalanceChecker
+      <h1>Connect wallet</h1>
+      <WalletConnectButton />
       <h1>Balance Checker lib</h1>
       <BalanceChecker />
     </div>

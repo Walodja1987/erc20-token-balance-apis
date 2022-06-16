@@ -73,21 +73,6 @@ function WalletConnectButton() {
         }
     };
 
-    // Example code to initialize a web3 instance using window.ethereum as the provider
-    // Requires installatino of web3 via npm install web3
-    // const checkConnection = async () => {
-    //     // Check if browser is running Metamask
-    //     let web3: any;
-    //     if (window.ethereum) {
-    //         web3 = new Web3(window.ethereum);
-    //     } else if (window.web3) {
-    //         web3 = new Web3(window.web3.currentProvider);
-    //     };
-
-    //     // Check if User is already connected by retrieving the accounts
-    //     const accounts = await web3.eth.getAccounts();
-    // };
-
     // Executed on page load. When an account is already connected, then it will display the corresponding account in the button text
     const getCurrentWalletConnected = async () => {
         if (ethereum) {

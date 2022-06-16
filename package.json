@@ -1,0 +1,53 @@
+{
+  "name": "erc20-token-balance-apis",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@metamask/onboarding": "^1.0.1",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@ethersproject/providers": "^5.6.4",
+    "eth-balance-checker": "^0.2.0",
+    "ethers": "^5.5.1",
+    "graphql": "^16.1.0",
+    "graphql-tag": "^2.12.6",
+    "qs": "^6.10.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.0.1",
+    "typescript": "^4.4.4",
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.7",
+    "@types/react": "^17.0.34",
+    "@types/react-dom": "^17.0.11",
+    "@types/react-vis": "^1.11.10",
+    "axios": "^0.21.4",
+    "web3": "^1.6.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

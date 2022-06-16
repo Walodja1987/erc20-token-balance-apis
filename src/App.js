@@ -1,14 +1,14 @@
 import './App.css';
 import WalletConnectButton from './WalletConnectButton';
-import ETHBalanceChecker from './ETHBalanceChecker';
+import BalanceChecker from './BalanceChecker';
 
 function App() {
   return (
     <div className="App">
       <h1></h1>
-      <WalletConnectButton />
-      <h1>ETH Balance Checker lib</h1>
-      <ETHBalanceChecker />
+      <WalletConnectButton />./ETHBalanceChecker
+      <h1>Balance Checker lib</h1>
+      <BalanceChecker />
     </div>
   );
 }

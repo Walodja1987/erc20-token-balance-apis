@@ -2,22 +2,20 @@
  * Component to set taker token approval
  */
 
-import { ERC20TokenContract, IZeroExContract } from '@0x/contract-wrappers'; // Optional in case you prefer 0x libraries to connect to contracts 
-import { BigNumber } from '@0x/utils';
 // import { parseEther } from 'ethers/lib/utils';
 import Web3 from 'web3';
 import * as ERC20 from './ERC20.json';
+import { config } from './constants';
 
 const ERC20_ABI = ERC20.abi;
-const contractAddresses = require("@0x/contract-addresses");
 
-function ApproveTaker() {
+function Approve() {
     
-    async function approveTaker() {
+    async function approve() {
         
-        // Get exchangeProxy contract address from @0x/contract-addresses library
-        const CHAIN_ID = 137; // 3: Ropsten; 1: Mainnet; 137: Polygon
-        const addresses = contractAddresses.getContractAddressesForChainOrThrow(CHAIN_ID);
+        // Connect to contract
+        const CHAIN_ID = 3; // 3: Ropsten; 1: Mainnet; 137: Polygon
+        const addresses = config[CHAIN_ID].divaAddress;
         const exchangeProxyAddress = addresses.exchangeProxy; // 0xdef1c0ded9bec7f1a1670819833240f027b25eff (same for several chains including Mainnet and Ropsten)
 
         // Create web3 instance using window.ethereum (i.e. MetaMask wallet) as the provider
@@ -68,9 +66,9 @@ function ApproveTaker() {
 
     return (
         <div>
-            <button onClick={approveTaker}>Approve by Taker</button>
+            <button onClick={approve}>Approve</button>
         </div>
     );
 }
 
-export default ApproveTaker;
+export default Approve;

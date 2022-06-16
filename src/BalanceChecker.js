@@ -26,19 +26,16 @@
  * -> You are missing the fourth parameter in batchFillLimitOrder function (check function definition)
  */
 
-import { ERC20TokenContract, IZeroExContract } from '@0x/contract-wrappers'; 
-import { BigNumber, providerUtils } from '@0x/utils';
 import * as qs from 'qs';
 import Web3 from 'web3';
 import * as ERC20 from './ERC20.json';
+import { config } from './constants';
 
 const ERC20_ABI = ERC20.abi;
-const utils = require("@0x/protocol-utils");
-const contractAddresses = require("@0x/contract-addresses");
 
-function BatchFillOrders() {
+function BalanceChecker() {
   
-    async function batchFillOrders() {
+    async function checkBalance() {
         
         // Get exchangeProxy contract address from @0x/contract-addresses library
         const CHAIN_ID = 3; // 3: Ropsten; 1: Mainnet; 137: Polygon
@@ -144,9 +141,9 @@ function BatchFillOrders() {
 
     return (
         <div>
-            <button onClick={batchFillOrders}>Batch fill orders</button>
+            <button onClick={checkBalance}>Batch fill orders</button>
         </div>
     );
 }
 
-export default BatchFillOrders;
+export default BalanceChecker;
